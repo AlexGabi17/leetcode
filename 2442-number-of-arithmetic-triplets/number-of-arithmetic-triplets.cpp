@@ -3,12 +3,13 @@ public:
     int arithmeticTriplets(vector<int>& nums, int diff) {
         uint8_t count = 0;
 
-        unordered_map<int, bool> mp;
+        unordered_set<int> set;
 
-        for(int num : nums) mp[num] = true;
+        for(int num : nums) set.insert(num);
 
         for(auto num : nums)
-            if(mp[num - diff] && mp[num + diff]) count ++;
+            if(set.find(num - diff) != set.end() && set.find(num + diff) != set.end())
+                count ++;
         
         return count;
     }
