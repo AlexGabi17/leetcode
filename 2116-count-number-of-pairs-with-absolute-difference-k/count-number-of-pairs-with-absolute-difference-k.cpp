@@ -12,14 +12,10 @@ public:
             else
                 mp[num] = 1;
         }
-        for(auto x : mp){
-            cout<<x.first<<" "<<x.second<<"\n";
-        }
+        
         for(int num : nums){
             if(mp[abs(num - k)] && num != abs(num-k)){
                 count += mp[num - k];
-                cout<<"counter "<<count<<", nr:"<< num <<'\n';
-
             }
         }
         return count;
