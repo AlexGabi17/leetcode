@@ -18,11 +18,9 @@ public:
             binary *= 2;
             it = it->next;
         }
-        cout<<binary;
         while(head){
             res += head->val * binary;
-            if(binary == 1) binary --;
-            else binary /= 2;
+            binary /= 2;
             head = head->next;
         }
 
