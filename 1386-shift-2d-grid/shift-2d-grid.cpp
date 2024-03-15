@@ -15,12 +15,12 @@ public:
             y=0;
             x ++;
         }
-        cout<<x<<" "<<y<<'\n';
+        //cout<<x<<" "<<y<<'\n';
         if(y == grid[0].size()){
             y = 0;
             x ++;
         }
-        cout<<"\n\n";
+        //cout<<"\n\n";
         for(int i=0; i<grid.size(); i++){
             for(int j=0; j<grid[0].size(); j++){
                 res[x][y] = grid[i][j];
