@@ -8,7 +8,7 @@ public:
         while(!q.empty()){
             pair<int, int> pos = q.front();
             q.pop();
-            cout<<pos.first<<" "<<pos.second<<'\n';
+            // cout<<pos.first<<" "<<pos.second<<'\n';
             image[pos.first][pos.second] = color;
 
             if(pos.first + 1 < image.size() && image[pos.first + 1][pos.second] == init){
